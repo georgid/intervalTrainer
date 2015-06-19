@@ -11,6 +11,7 @@ import json
 from musixMatch import searchTrackID, getSubtitlesForATrack, getThumbnail
 import logging
 from museScoreParser import getNotesList, parseNoteList, getIntervalsFromScore
+import os
 app = Flask(__name__)
 
 logger = logging.getLogger(__name__)
@@ -51,6 +52,7 @@ def parseRequest(request):
     for track in songList: 
         trackTitle = track["name"]
         print trackTitle
+        
     
     ######### get MXM stuff 
         trackid, trackSpotifyId, subtitleID = searchTrackID(artistName, trackTitle)
@@ -88,4 +90,5 @@ def parseRequest(request):
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
