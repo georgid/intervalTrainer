@@ -27,6 +27,7 @@ def parse_request():
         print "post"
         result = parseRequest(request)
     elif request.method == 'GET':
+        result ="get result"
         print "get"
     return result
 

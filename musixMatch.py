@@ -9,15 +9,18 @@ import os
 import sys
 import requests
 import logging
+from getCoverTrackIDs import hasLyricsAndSubtitles, callMXMGetAPI,\
+    getAnnotaitonForResponse
+from lyricsProcessor import fetchLyricsThumbnail, parseLyricsThumbnail
 
 # file parsing tools as external lib 
 parentDir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__) ), os.path.pardir)) 
 
 pathRedisCover = os.path.join(parentDir, 'redisCover')
-print pathRedisCover
-sys.path.append(pathRedisCover)
-from  getCoverTrackIDs import  hasLyricsAndSubtitles, callMXMGetAPI, getAnnotaitonForResponse
-from lyricsProcessor import fetchLyricsThumbnail, parseLyricsThumbnail
+# print pathRedisCover
+# sys.path.append(pathRedisCover)
+# from  getCoverTrackIDs import  hasLyricsAndSubtitles, callMXMGetAPI, getAnnotaitonForResponse
+# from lyricsProcessor import fetchLyricsThumbnail, parseLyricsThumbnail
 
 logger = logging.getLogger(__name__)
 
