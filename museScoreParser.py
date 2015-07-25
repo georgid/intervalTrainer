@@ -1,6 +1,6 @@
 '''
 Created on Jun 19, 2015
-
+code adapted from https://gist.github.com/lasconic/9d21b2f9eb0cf5b521cd
 @author: joro
 '''
 

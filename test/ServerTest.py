@@ -34,3 +34,4 @@ def ServerTest():
     
     import requests
     r = requests.post(url, data=json.dumps(query), headers=headers)
+    print r.text

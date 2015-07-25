@@ -14,6 +14,7 @@ from museScoreParser import getNotesList, parseNoteList, getIntervalsFromScore
 import os
 app = Flask(__name__)
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -66,7 +67,7 @@ def parseRequest(request):
             lyricsThumbnail, beginTs, endTs  = getThumbnail(trackid, subtitles)
             
             # HARD CODED:
-            lyricsThumbnail = "tall and tan and young and lovely"
+#             lyricsThumbnail = "tall and tan and young and lovely"
             
             print ("lyricsThumbnail is : " + lyricsThumbnail)
             
@@ -90,5 +91,6 @@ def parseRequest(request):
     
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+#     port = int(os.environ.get("PORT", 80))
+#     print port
+    app.run(host='0.0.0.0', port=8000)
