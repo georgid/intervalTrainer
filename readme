@@ -1,0 +1,9 @@
+
+
+The app done in the MHD Barcelona 2015 has the arcitecture as shown in diagram intervalTrainerArrows.png
+
+This is code for server side only. No GUI. Main logic in Server.py
+
+
+
+
